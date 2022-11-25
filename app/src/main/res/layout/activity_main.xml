@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".presentation.screen.MainActivity">
 
-    <com.codeway.instagramstoryclone.customview.FixedViewPager
+    <com.codeway.instagramstoryclone.presentation.customview.FixedViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

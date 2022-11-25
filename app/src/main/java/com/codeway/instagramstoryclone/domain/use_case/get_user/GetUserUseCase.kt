@@ -15,13 +15,13 @@ class GetUserUseCase @Inject constructor(
 ) {
     operator fun invoke(): Flow<Resource<List<User>>> = flow {
         try {
-            emit(Resource.Loading<List<User>>())
+            emit(Resource.Loading())
             val users = repository.getUserList()
-            emit(Resource.Success<List<User>>(users))
+            emit(Resource.Success(users))
         } catch(e: HttpException) {
-            emit(Resource.Error<List<User>>(e.localizedMessage ?: "An unexpected error occured"))
+            emit(Resource.Error(e.localizedMessage ?: "An unexpected error occured"))
         } catch(e: IOException) {
-            emit(Resource.Error<List<User>>("Couldn't reach server. Check your internet connection."))
+            emit(Resource.Error("Couldn't reach server. Check your internet connection."))
         }
     }
 }

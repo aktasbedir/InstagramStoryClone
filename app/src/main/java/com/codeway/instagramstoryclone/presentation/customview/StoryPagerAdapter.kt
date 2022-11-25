@@ -1,13 +1,10 @@
-package com.codeway.instagramstoryclone.customview
+package com.codeway.instagramstoryclone.presentation.customview
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
-import androidx.recyclerview.widget.AsyncListDiffer
-import androidx.recyclerview.widget.DiffUtil
 import androidx.viewpager.widget.ViewPager
 import com.codeway.instagramstoryclone.data.StoryUser
-//import com.codeway.instagramstoryclone.domain.model.User
 import com.codeway.instagramstoryclone.presentation.screen.StoryDisplayFragment
 
 class StoryPagerAdapter constructor(fragmentManager: FragmentManager, private val storyList: ArrayList<StoryUser>)

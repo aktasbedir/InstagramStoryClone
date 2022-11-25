@@ -58,7 +58,7 @@
             android:background="@drawable/story_top_shadow"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.codeway.instagramstoryclone.customview.StoriesProgressView
+        <com.codeway.instagramstoryclone.presentation.customview.StoriesProgressView
             android:id="@+id/storiesProgressView"
             android:layout_width="match_parent"
             android:layout_height="3dp"

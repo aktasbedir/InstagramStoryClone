@@ -1,4 +1,4 @@
-package com.codeway.instagramstoryclone.utils
+package com.codeway.instagramstoryclone.common.utils
 
 import android.view.animation.ScaleAnimation
 import android.view.animation.Transformation

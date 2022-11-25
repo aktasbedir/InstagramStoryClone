@@ -1,4 +1,4 @@
-package com.codeway.instagramstoryclone.customview
+package com.codeway.instagramstoryclone.presentation.customview
 
 import android.content.Context
 import android.util.AttributeSet
@@ -145,12 +145,6 @@ class StoriesProgressView @JvmOverloads constructor(
         }
         if (progressBars.size > from) {
             progressBars[from].startProgress()
-        }
-    }
-
-    fun destroy() {
-        for (p in progressBars) {
-            p.clear()
         }
     }
 

@@ -12,15 +12,14 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
-import com.c2m.storyviewer.utils.hide
-import com.c2m.storyviewer.utils.show
+import com.codeway.instagramstoryclone.common.utils.hide
+import com.codeway.instagramstoryclone.common.utils.show
 import com.codeway.instagramstoryclone.R
 import com.codeway.instagramstoryclone.app.StoryApp
-import com.codeway.instagramstoryclone.app.StoryApp.Companion.simpleCache
-import com.codeway.instagramstoryclone.customview.StoriesProgressView
+import com.codeway.instagramstoryclone.presentation.customview.StoriesProgressView
 import com.codeway.instagramstoryclone.data.Story
 import com.codeway.instagramstoryclone.data.StoryUser
-import com.codeway.instagramstoryclone.utils.OnSwipeTouchListener
+import com.codeway.instagramstoryclone.common.utils.OnSwipeTouchListener
 import com.google.android.exoplayer2.ExoPlaybackException
 import com.google.android.exoplayer2.ExoPlayerFactory
 import com.google.android.exoplayer2.Player
@@ -271,7 +270,7 @@ class StoryDisplayFragment : Fragment(),
         storiesProgressView?.setStoriesCountDebug(
             stories.size, position = arguments?.getInt(EXTRA_POSITION) ?: -1
         )
-        //fotolar 5 saniye oldu
+        //Duration of Image => 5 second
         storiesProgressView?.setAllStoryDuration(5000L)
         storiesProgressView?.setStoriesListener(this)
 

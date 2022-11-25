@@ -12,7 +12,6 @@ class StoryApp : Application() {
     override fun onCreate() {
         super.onCreate()
 //       LeastRecentlyUsedCacheEvictor: Evicts least recently used cache files first.
-//       https://stackoverflow.com/questions/63880202/what-is-leastrecentlyusedcacheevictor-in-exoplayer
         val leastRecentlyUsedCacheEvictor = LeastRecentlyUsedCacheEvictor(90 * 1024 * 1024)
         val databaseProvider: DatabaseProvider = ExoDatabaseProvider(this)
 

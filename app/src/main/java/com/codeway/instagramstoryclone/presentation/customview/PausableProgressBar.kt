@@ -1,4 +1,4 @@
-package com.codeway.instagramstoryclone.customview
+package com.codeway.instagramstoryclone.presentation.customview
 
 import android.content.Context
 import android.util.AttributeSet
@@ -9,7 +9,7 @@ import android.view.animation.Animation.AnimationListener
 import android.view.animation.LinearInterpolator
 import android.widget.FrameLayout
 import com.codeway.instagramstoryclone.R
-import com.codeway.instagramstoryclone.utils.PausableScaleAnimation
+import com.codeway.instagramstoryclone.common.utils.PausableScaleAnimation
 
 class PausableProgressBar @JvmOverloads constructor(
     context: Context,

@@ -1,10 +1,8 @@
-package com.codeway.instagramstoryclone.utils
+package com.codeway.instagramstoryclone.common.utils
 
 
-import android.util.Log
 import com.codeway.instagramstoryclone.data.Story
 import com.codeway.instagramstoryclone.data.StoryUser
-import com.codeway.instagramstoryclone.domain.model.User
 import kotlin.random.Random
 
 object StoryGenerator {

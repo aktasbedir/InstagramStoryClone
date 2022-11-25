@@ -9,15 +9,12 @@ import android.util.SparseIntArray
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator
-import androidx.recyclerview.widget.AsyncListDiffer
 import com.bumptech.glide.Glide
 import com.codeway.instagramstoryclone.R
-import com.codeway.instagramstoryclone.app.StoryApp
-import com.codeway.instagramstoryclone.customview.StoryPagerAdapter
+import com.codeway.instagramstoryclone.presentation.customview.StoryPagerAdapter
 import com.codeway.instagramstoryclone.data.StoryUser
-import com.codeway.instagramstoryclone.domain.model.User
-import com.codeway.instagramstoryclone.utils.CubeOutTransformer
-import com.codeway.instagramstoryclone.utils.StoryGenerator
+import com.codeway.instagramstoryclone.common.utils.CubeOutTransformer
+import com.codeway.instagramstoryclone.common.utils.StoryGenerator
 import com.google.android.exoplayer2.upstream.DataSource
 import com.google.android.exoplayer2.upstream.DataSpec
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
@@ -25,7 +22,8 @@ import com.google.android.exoplayer2.upstream.cache.CacheUtil
 import com.google.android.exoplayer2.util.Util
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.coroutines.*
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.async
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity(),
@@ -124,19 +122,6 @@ class MainActivity : AppCompatActivity(),
                                 / requestLength)
                         Log.d("preLoadVideos", "downloadPercentage: $downloadPercentage")
                     }
-
-                /*try {
-                    CacheUtil.cache(
-                        dataSpec,
-                        StoryApp.simpleCache,
-                        CacheUtil.DEFAULT_CACHE_KEY_FACTORY,
-                        dataSource,
-                        listener,
-                        null
-                    )
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                }*/
             }
         }
     }
@@ -151,12 +136,6 @@ class MainActivity : AppCompatActivity(),
         return pagerAdapter.findFragmentByPosition(viewPager, currentPage) as StoryDisplayFragment
     }
 
-    /**
-     * Change ViewPage sliding programmatically(not using reflection).
-     * https://tech.dely.jp/entry/2018/12/13/110000
-     * What for?
-     * setCurrentItem(int, boolean) changes too fast. And it cannot set animation duration.
-     */
     private var prevDragPosition = 0
 
     private fun fakeDrag(forward: Boolean) {

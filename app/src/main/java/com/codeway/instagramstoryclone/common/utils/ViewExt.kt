@@ -1,4 +1,4 @@
-package com.c2m.storyviewer.utils
+package com.codeway.instagramstoryclone.common.utils
 
 import android.view.View
 

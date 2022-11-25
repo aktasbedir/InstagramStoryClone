@@ -1,4 +1,4 @@
-package com.codeway.instagramstoryclone.utils
+package com.codeway.instagramstoryclone.common.utils
 
 import android.view.View
 import androidx.viewpager.widget.ViewPager
