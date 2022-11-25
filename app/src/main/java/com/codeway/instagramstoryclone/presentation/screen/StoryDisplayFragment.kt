@@ -15,7 +15,7 @@ import com.bumptech.glide.Glide
 import com.codeway.instagramstoryclone.common.utils.hide
 import com.codeway.instagramstoryclone.common.utils.show
 import com.codeway.instagramstoryclone.R
-import com.codeway.instagramstoryclone.app.StoryApp
+import com.codeway.instagramstoryclone.common.app.StoryApp
 import com.codeway.instagramstoryclone.presentation.customview.StoriesProgressView
 import com.codeway.instagramstoryclone.data.Story
 import com.codeway.instagramstoryclone.data.StoryUser

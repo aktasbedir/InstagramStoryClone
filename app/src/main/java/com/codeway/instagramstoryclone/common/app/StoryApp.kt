@@ -1,4 +1,4 @@
-package com.codeway.instagramstoryclone.app
+package com.codeway.instagramstoryclone.common.app
 
 import android.app.Application
 import com.google.android.exoplayer2.database.DatabaseProvider
